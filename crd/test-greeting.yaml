@@ -1,0 +1,8 @@
+apiVersion: samplecontroller.k8s.io/v1alpha1
+kind: Greeting
+metadata:
+  name: ramana-greeting
+spec:
+  emailToGreet: ramana-greeting
+  messageToGreet: Hello
+  replicas: 1
