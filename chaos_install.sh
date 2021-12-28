@@ -6,10 +6,6 @@ helm repo update
 # helm search repo chaos-mesh
 kubectl create ns chaos-testing
 
-helm upgrade -i chaos-mesh chaos-mesh/chaos-mesh -n chaos-testing \
-    --version 2.0.3 \
-    --set controllerManager.enableFilterNamespace=true 
-
 kubectl get crds
 kubectl get all -n chaos-testing
 kubectl get ns -o jsonpath='{.items[?(@.metadata.annotations.chaos-mesh\.org/inject=="enabled")].metadata.name}'
